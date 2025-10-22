@@ -1,0 +1,116 @@
+.products-container .product {
+    width: 30%;
+    max-width: 400px;
+    height: 600px;
+    margin-bottom: 50px;
+    background: rgb(220, 219, 219);
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.products-container .product img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+.products-container .product img:hover {
+    transform: scale(1.05);
+}
+
+.products-container .product h3,
+.products-container .product p,
+.products-container .product b {
+    margin: 10px 20px;
+    color: #333;
+}
+
+.products-container .product b {
+    font-weight: 600;
+    position: absolute;
+    height: 35px;
+    margin: 0;
+    margin-left: 20px;
+    line-height: 35px;
+    bottom: 10px;
+}
+
+
+
+.products-container .product h3 {
+    height: 9%;
+    overflow: hidden;
+    letter-spacing: -1px;
+}
+
+.products-container .product section {
+    margin-inline: 20px;
+}
+
+.products-container .product .count {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.products-container .product .count,
+.products-container .product .countControl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products-container .product .countControl span {
+    display: inline-block;
+    margin-inline: 20px;
+}
+
+.products-container .product b {
+    color: rgb(82, 164, 0);
+}
+
+.products-container button {
+    background: rgb(137, 12, 12);
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 500ms ease;
+}
+
+.products-container .countBtn:hover {
+    width: 45px;
+}
+
+.products-container .countBtn:active {
+    background: rgb(167, 14, 14);
+}
+
+.products-container .add-to-cart {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    background: rgb(82, 164, 0);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 40% 50%);
+    width: 60px;
+    border-radius: 10%;
+}
+
+.products-container .add-to-cart svg {
+    margin-left: 13px;
+    transform: scale(1.2);
+}
+
+.products-container .add-to-cart:hover {
+    width: 100px;
+}
+
+.products-container .add-to-cart:active {
+    background: rgb(99, 197, 0);
+}

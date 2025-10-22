@@ -1,0 +1,98 @@
+header .shop-cart .orders-container {
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 30px;
+}
+
+header .shop-cart .product {
+    max-width: 100%;
+    float: left;
+    margin-bottom: 30px;
+    margin-right: 25px;
+}
+
+header .shop-cart .product>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header .shop-cart .product img {
+    width: 100px;
+    float: left;
+}
+
+header .shop-cart .product h2 {
+    min-width: 95%;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+header .shop-cart .product b {
+    font-weight: 600;
+    color: rgb(82, 164, 0);
+    font-size: 20px;
+}
+
+@keyframes appearance {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+header .shop-cart .product span {
+    opacity: 0;
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(137, 12, 12);
+}
+
+header .shop-cart .product span.visible {
+    animation: appearance 800ms ease forwards;
+}
+
+header .shop-cart .product span.hidden {
+    animation: hide 800ms ease forwards;
+}
+
+
+header .shop-cart .product .delete-icon {
+    color: rgb(137, 12, 12);
+    float: right;
+    margin-left: 70px;
+    position: relative;
+    cursor: pointer;
+    transform: scale(1.30);
+    transition: color 500ms ease, transform 500ms ease;
+}
+
+header .shop-cart .product .delete-icon:hover {
+    color: rgb(218, 18, 18);
+    transform: scale(2);
+}
+
+header .shop-cart .summa {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(82, 164, 0);
+    margin-bottom: 20px;
+}
