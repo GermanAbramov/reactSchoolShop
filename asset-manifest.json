@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/reactSchoolShop/static/css/main.0621ae94.css",
-    "main.js": "/reactSchoolShop/static/js/main.ca9fd824.js",
+    "main.css": "/reactSchoolShop/static/css/main.67195994.css",
+    "main.js": "/reactSchoolShop/static/js/main.1fa10c75.js",
     "static/media/workPlace.png": "/reactSchoolShop/static/media/workPlace.686ea2dd9818d97d19a6.png",
     "index.html": "/reactSchoolShop/index.html",
-    "main.0621ae94.css.map": "/reactSchoolShop/static/css/main.0621ae94.css.map",
-    "main.ca9fd824.js.map": "/reactSchoolShop/static/js/main.ca9fd824.js.map"
+    "main.67195994.css.map": "/reactSchoolShop/static/css/main.67195994.css.map",
+    "main.1fa10c75.js.map": "/reactSchoolShop/static/js/main.1fa10c75.js.map"
   },
   "entrypoints": [
-    "static/css/main.0621ae94.css",
-    "static/js/main.ca9fd824.js"
+    "static/css/main.67195994.css",
+    "static/js/main.1fa10c75.js"
   ]
 }
