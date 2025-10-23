@@ -7,13 +7,16 @@ import Map from "./components/Map.jsx";
 import popular_products_ from "./DB_imitation/popular.js";
 import products_ from './DB_imitation/products.js';
 import { useState } from "react";
+import ShowFullProduct from "./components/ShowFullProduct/ShowFullProduct.jsx";
 
 function App() {
   const [popularProducts] = useState(popular_products_);
   const [orders, setOrders] = useState([]);
   const [showCartModal, setShowCartModal] = useState(false);
   const [selectedTab, setSelectedTab] = useState('main');
-  const [currentItems, setCurrentItems] = useState(products_);
+  const [currentProducts, setCurrentProducts] = useState(products_);
+  const [showFullProduct, setShowFullProduct] = useState(false);
+  const [fullProduct, setFullProduct] = useState({});
 
   return (
     <div className="wrapper">
@@ -21,13 +24,17 @@ function App() {
         <div>{showCartModal && <div className='add-to-cart-modal'>Товар добавлен</div>}</div>
         <Header orders={orders} onDelete={deleteOrder} selectedTab={selectedTab} setSelectedTab={selectTab} />
 
+        {showFullProduct && <ShowFullProduct product={fullProduct} onAdd={addToOrders}
+          setShowFullProduct={setShowFullProduct} showModalCart={showModalCart} />}
+
         {(selectedTab === 'main') &&
           <main>
             <section className="popular-products-title">
               <h2>Популярные товары</h2>
               <p>Посмотрите, какие принадлежности покупают чаще всего</p>
             </section>
-            <ProductsContainer products={popularProducts} onAdd={addToOrders} showModalCart={showModalCart} />
+            <ProductsContainer products={popularProducts} onAdd={addToOrders} showModalCart={showModalCart}
+              onShowProduct={onShowProduct} />
           </main>
         }
 
@@ -35,7 +42,8 @@ function App() {
           <main>
             <Categories chooseCategory={chooseCategory} />
             <section className="products">
-              <ProductsContainer products={currentItems} onAdd={addToOrders} showModalCart={showModalCart} />
+              <ProductsContainer products={currentProducts} onAdd={addToOrders} showModalCart={showModalCart}
+                onShowProduct={onShowProduct} />
             </section>
           </main>
         }
@@ -127,10 +135,15 @@ function App() {
 
   function chooseCategory(category) {
     if (category === 'all') {
-      setCurrentItems(products_)
+      setCurrentProducts(products_)
       return
     }
-    setCurrentItems(products_.filter(el => el.category === category))
+    setCurrentProducts(products_.filter(el => el.category === category))
+  }
+
+  function onShowProduct(product) {
+    setFullProduct(product)
+    setShowFullProduct(!showFullProduct)
   }
 }
 

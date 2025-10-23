@@ -1,9 +1,7 @@
-.products-container .product {
+.overlay .product {
     min-width: 350px;
-    max-width: 30%;
-
-
-    margin-bottom: 50px;
+    max-width: 60%;
+    margin-inline: auto;
     background: rgb(220, 219, 219);
     border-radius: 15px 15px 0 0;
     overflow: hidden;
@@ -11,27 +9,26 @@
     padding-bottom: 20px;
 }
 
-.products-container .product img {
+.overlay .product img {
     border-radius: 15px 15px 0 0;
-    transition: transform 500ms ease;
-    cursor: pointer;
     height: 350px;
     display: block;
     margin: 0 auto;
 }
 
-.products-container .product img:hover {
-    transform: scale(1.05);
-}
-
-.products-container .product h3,
-.products-container .product p,
-.products-container .product b {
+.overlay .product h3,
+.overlay .product p,
+.overlay .product b {
     margin: 10px 20px;
     color: #333;
 }
 
-.products-container .product b {
+.overlay .product p {
+    max-height: 100px;
+    overflow: auto;
+}
+
+.overlay .product b {
     font-weight: 600;
     position: absolute;
     height: 35px;
@@ -43,38 +40,38 @@
 
 
 
-.products-container .product h3 {
+.overlay .product h3 {
     height: 8%;
     overflow: hidden;
     letter-spacing: -1px;
 }
 
-.products-container .product section {
+.overlay .product section {
     margin-inline: 20px;
 }
 
-.products-container .product .count {
+.overlay .product .count {
     margin-bottom: 50px;
     font-weight: 600;
 }
 
-.products-container .product .count,
-.products-container .product .countControl {
+.overlay .product .count,
+.overlay .product .countControl {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.products-container .product .countControl span {
+.overlay .product .countControl span {
     display: inline-block;
     margin-inline: 20px;
 }
 
-.products-container .product b {
+.overlay .product b {
     color: rgb(82, 164, 0);
 }
 
-.products-container button {
+.overlay button {
     background: rgb(137, 12, 12);
     width: 35px;
     height: 35px;
@@ -87,15 +84,15 @@
     transition: all 500ms ease;
 }
 
-.products-container .countBtn:hover {
+.overlay .countBtn:hover {
     width: 45px;
 }
 
-.products-container .countBtn:active {
+.overlay .countBtn:active {
     background: rgb(167, 14, 14);
 }
 
-.products-container .add-to-cart {
+.overlay .add-to-cart {
     position: absolute;
     right: 20px;
     bottom: 10px;
@@ -105,15 +102,15 @@
     border-radius: 10%;
 }
 
-.products-container .add-to-cart svg {
+.overlay .add-to-cart svg {
     margin-left: 13px;
     transform: scale(1.2);
 }
 
-.products-container .add-to-cart:hover {
+.overlay .add-to-cart:hover {
     width: 100px;
 }
 
-.products-container .add-to-cart:active {
+.overlay .add-to-cart:active {
     background: rgb(99, 197, 0);
 }

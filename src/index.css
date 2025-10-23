@@ -76,6 +76,19 @@ h3 {
   animation: cart-modal-appearance 1.8s ease;
 }
 
+.page-wrapper .overlay {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.712);
+  z-index: 900;
+  overflow: auto;
+}
+
 header {
   position: relative;
   margin-bottom: 20px;
