@@ -9,10 +9,10 @@ export default function Order(props) {
     return (
         <div className='product'>
             <div>
-                <img src={"./img/products/" + product.img} alt={product.title} />
+                <img src={"/reactSchoolShop/img/products/" + product.img} alt={product.title} />
                 <FaTrash className="delete-icon"
                     onClick={() => {
-                        props.onDelete(props.item.id)
+                        props.onDelete(props.product.id)
                         setDeleteClass('');
                     }}
                     onMouseEnter={() => { setDeleteClass('visible') }}

@@ -8,10 +8,10 @@ export default function Footer() {
                 <span className="contacts">
                     Телефон: 8-800-333-23-05
                     <ul className="media">
-                        <li><img src="./img/media_logo/Telegram.png" alt="Телеграм" /></li>
-                        <li><img src="./img/media_logo/Vk.png" alt="ВК" /></li>
-                        <li><img src="./img/media_logo/Whatsapp.png" alt="Ватсап" /></li>
-                        <li><img src="./img/media_logo/YandexDzen.png" alt="Яндекс Дзен" /></li>
+                        <li><img src="/reactSchoolShop/img/media_logo/Telegram.png" alt="Телеграм" /></li>
+                        <li><img src="/reactSchoolShop/img/media_logo/Vk.png" alt="ВК" /></li>
+                        <li><img src="/reactSchoolShop/img/media_logo/Whatsapp.png" alt="Ватсап" /></li>
+                        <li><img src="/reactSchoolShop/img/media_logo/YandexDzen.png" alt="Яндекс Дзен" /></li>
                     </ul>
                 </span>
             </section>

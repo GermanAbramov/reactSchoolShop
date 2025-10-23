@@ -16,19 +16,27 @@ button {
   border: 0;
 }
 
-h2 {
+h1,
+h2,
+h3 {
   font-weight: 600;
   font-size: 40px;
   display: inline-block;
 }
 
+h2 {
+  font-size: 30px;
+}
 
+h3 {
+  font-size: 20px;
+}
 
 .wrapper {
   margin-inline: auto;
-  max-width: 1500px;
+  max-width: 1100px;
   box-sizing: border-box;
-  padding: 3vh 8vw;
+  padding: 3vh 15px;
   padding-bottom: 0;
   min-height: 100vh;
   display: flex;
@@ -74,18 +82,19 @@ header {
 }
 
 header>section {
+  padding-inline: 20px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-header>section h2 {
+header>section h1 {
   cursor: pointer;
   transition: all 700ms linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
 }
 
-header>section h2.logo:hover {
+header>section h1.logo:hover {
   letter-spacing: 5px;
 }
 
@@ -162,20 +171,29 @@ header .banner {
   padding-left: 10%;
 }
 
-header .banner h3 {
+header .banner h2 {
   font-weight: 600;
-  font-size: 60px;
+  font-size: 50px;
   color: rgb(227, 227, 227);
   line-height: 1;
   margin-bottom: 50px;
 }
 
 header .banner li {
-  font-size: 30px;
+  font-size: 25px;
   color: rgb(227, 227, 227);
   line-height: 0.5;
   margin-bottom: 25px;
   list-style-position: inside;
+}
+
+header .mini-banner {
+  background: rgb(201, 201, 201);
+  padding-block: 10px;
+}
+
+header .mini-banner h2 {
+  cursor: auto;
 }
 
 
@@ -184,10 +202,49 @@ main h2 {
 }
 
 main .popular-products-title p {
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
+main .about {
+  margin-bottom: 20px;
+}
+
+main .about p {
+  margin-bottom: 15px;
+}
+
+main .about p,
+main .about ul li {
+  font-size: 19px;
+  list-style-position: inside;
+}
+
+main .about ul li {
+  margin-bottom: 10px;
+}
+
+main .about ul {
+  margin-bottom: 15px;
+}
+
+main .contacts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .contacts h2 {
+  margin-bottom: 11px;
+}
+
+main .contacts p {
+  margin-bottom: 8px;
+}
+
+main .contacts .map {
+  border: 2px solid black;
+}
 
 footer {
   box-sizing: border-box;
@@ -225,3 +282,5 @@ footer ul.media li {
 footer ul.media li img {
   width: 50px;
 }
+
+@media (width < 1100px) {}

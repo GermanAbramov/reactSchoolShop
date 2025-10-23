@@ -1,5 +1,4 @@
 main .products-container {
-    width: 30%;
     display: flex;
     flex-wrap: wrap;
     width: 100%;

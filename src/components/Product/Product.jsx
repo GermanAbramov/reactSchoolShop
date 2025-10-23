@@ -8,7 +8,7 @@ export default function Product(props) {
 
     return (
         <section className='product'>
-            <img src={"./img/products/" + product.img} alt={product.title} />
+            <img src={"/reactSchoolShop/img/products/" + product.img} alt={product.title} />
             <h3>{truncate(product.title, 50)}</h3>
             <p>{truncate(product.desc, 75)}</p>
             <section className="count">Количество
