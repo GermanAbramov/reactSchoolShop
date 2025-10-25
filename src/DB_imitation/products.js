@@ -6,6 +6,7 @@ const products = [
         price: '209.00',
         category: 'diary',
         img: 'дневник1.jpg',
+        isAviable: true,
     },
     {
         id: 2,
@@ -14,7 +15,7 @@ const products = [
         price: '189.00',
         category: 'diary',
         img: 'дневник2.jpg',
-
+        isAviable: false,
     },
     {
         id: 3,
@@ -23,6 +24,7 @@ const products = [
         price: '209.00',
         category: 'diary',
         img: 'дневник3.jpg',
+        isAviable: true,
     },
     {
         id: 4,
@@ -31,6 +33,7 @@ const products = [
         price: '189.00',
         category: 'diary',
         img: 'дневник4.jpg',
+        isAviable: true,
     },
     {
         id: 5,
@@ -39,6 +42,7 @@ const products = [
         price: '229.00',
         category: 'diary',
         img: 'дневник5.jpg',
+        isAviable: true,
     },
     {
         id: 6,
@@ -47,6 +51,7 @@ const products = [
         price: '299.00',
         category: 'diary',
         img: 'дневник6.jpg',
+        isAviable: true,
     },
     {
         id: 7,
@@ -55,6 +60,7 @@ const products = [
         price: '299.00',
         category: 'diary',
         img: 'дневник7.jpg',
+        isAviable: true,
     },
     {
         id: 8,
@@ -63,6 +69,7 @@ const products = [
         price: '310.00',
         category: 'diary',
         img: 'дневник8.jpg',
+        isAviable: true,
     },
     {
         id: 9,
@@ -71,6 +78,7 @@ const products = [
         price: '309.00',
         category: 'diary',
         img: 'дневник9.jpg',
+        isAviable: true,
     },
     {
         id: 10,
@@ -79,54 +87,61 @@ const products = [
         price: '299.00',
         category: 'diary',
         img: 'дневник10.jpg',
+        isAviable: false,
     },
     {
         id: 11,
         title: '"Centrum" Рюкзак каркасный ХАМЕЛЕОН 90045 черный с паетками',
         desc: "Рюкзак каркасный из супермодной ткани ХАМЕЛЕОН, 1 отделение, на лицевой стороне - двухсторонние пайетки, внутри на подкладке без карманов, спинка из трехслойной сетки, мягкие лямки, размер 29 х 23 х 7 см",
-        price: 1399,
+        price: '1399.00',
         category: 'backpack',
         img: "рюкзак1.jpg",
+        isAviable: true,
     },
     {
         id: 12,
         title: '"ErichKrause" Рюкзак EasyLine Style с двумя отделениями 22L 58820 5 х 30.5 х 43 см Light Blue',
         desc: "Универсальный рюкзак с двумя отделениями. Объём: 22 литра. Вес: 490 грамм. Два отделения формата А4+, основное отделение включает отсек для документов. Во втором отделении расположен сетчатый карман на молнии. Снаружи два кармана на молнии и два боковых кармана для бутылки с водой или зонтика. На спинке расположен потайной карман на молнии. Места крепления лямок и ручки усилены дополнительными швами из лавсановых нитей. Спинка и лямки мягкие и удобные благодаря внутреннему уплотнителю. Высококачественные пластиковые молнии легко открываются и закрываются одной рукой. Рюкзак изготовлен из износо- и морозостойкого водоотталкивающего 100% полиэстера.",
-        price: 4099,
+        price: '4099.00',
         category: 'backpack',
         img: "рюкзак2.jpg",
+        isAviable: true,
     },
     {
         id: 13,
         title: '"ErichKrause" Рюкзак EasyLine® 17L 57335 4 х 30 х 41 см Aerodynamics',
         desc: "Универсальная модель, популярная во всем мире. Объем 17 л, размер 29x39x13 см. Материал: износо- морозостойкий водоотталкивающий 100% полиэстер. Спинка и лямки комфортные, благодаря внутреннему уплотнителю. Места крепления лямок и ручки усилены дополнительными швами. Внутри одно вместительное отделение, снаружи большой передний карман на молнии. Надежные молнии с мягким ходом оснащены бегунками с логотипом ErichKrause®.",
-        price: 1800,
+        price: '1800.00',
         category: 'backpack',
         img: "рюкзак3.jpg",
+        isAviable: true,
     },
     {
         id: 14,
         title: '"ErichKrause" Ученический рюкзак SchoolLine с двумя отделениями и грудной перемычкой 24L 58807 10 х 31 х 45 см Night Forest',
         desc: "Рюкзак с двумя отделениями и грудной перемычкой. Объём: 24 литра. Вес: 620 грамм. Два отделения для тетрадей и учебников формата А4+. Внутри основного отделения расположен отсек для ноутбука. Снаружи вместительный передний карман с клапаном и два эластичных боковых кармана для бутылки с водой или зонтика. Мягкая спинка и широкие анатомические лямки из воздухопроницаемого материала AirMesh, а также грудная перемычка снижают нагрузку на позвоночник. Пряжки-регуляторы объёма расположены по бокам рюкзака. Светоотражающие элементы на лямках. Места крепления лямок и ручки усилены дополнительными швами из лавсановых нитей. Рюкзак изготовлен из износо- и морозостойкого водоотталкивающего 100% полиэстера. Надёжные молнии с мягким ходом, тактильно приятные резиновые бегунки.",
-        price: 4639,
+        price: '4639.00',
         category: 'backpack',
         img: "рюкзак4.jpg",
+        isAviable: true,
     },
     {
         id: 15,
         title: '"ErichKrause" Рюкзак StreetLine 16L 54699 4 х 29 х 39 см Girl Power',
         desc: "Универсальный рюкзак-сумка. Объем 16 л, размер 29х39х15 см. Материал: износо- морозостойкий водоотталкивающий 100% полиэстер, искусственная кожа. Сверху две ручки обеспечивают удобство переноса в руках. Места крепления лямок и ручек усилены дополнительными швами. Одно вместительное отделение на молнии с увеличенными бегунками. Внутри отделение для ноутбука и карман на молнии. На спинке предусмотрено крепление на чемодан с потайным карманом на молнии. Рюкзак декорирован пеналом-брелоком.",
-        price: 2998,
+        price: '2998.00',
         category: 'backpack',
         img: "рюкзак5.jpg",
+        isAviable: false,
     },
     {
         id: 16,
         title: '"ErichKrause" Ученический рюкзак EasyLine® с двумя отделениями 20L 57262 23 х 33 х 44 см Meditation',
         desc: "Рюкзак с двумя отделениями - модель серии EasyLine® с увеличенным объемом 20 л. Вес 420 г, размер 44x23x33см. Материал: износо- морозостойкий водоотталкивающий 100% полиэстер. Два отделения формата А4+, включая отсек для ноутбука размером 16 дюймов. Снаружи вместительный передний карман на молнии и два боковых кармана из однослойной сетки. Мягкая спинка и широкие анатомические лямки из воздухопроницаемого материала AirMesh снижают нагрузку на позвоночник. Объемная и мягкая ручка для удобной переноски. Места крепления лямок и ручки усилены дополнительными швами. На лямке находится кармашек на молнии для проездного или наушников. Надежные молнии с мягким ходом для быстрого доступа к отделениям рюкзака.",
-        price: 3456,
+        price: '3456.00',
         category: 'backpack',
         img: "рюкзак6.jpg",
+        isAviable: true,
     },
     {
         id: 17,
@@ -135,6 +150,7 @@ const products = [
         price: 2399,
         category: 'backpack',
         img: "рюкзак7.jpg",
+        isAviable: true,
     },
     {
         id: 18,
@@ -143,6 +159,7 @@ const products = [
         price: 2700,
         category: 'backpack',
         img: "рюкзак8.jpg",
+        isAviable: true,
     },
     {
         id: 19,
@@ -151,6 +168,7 @@ const products = [
         price: 2290,
         category: 'backpack',
         img: "рюкзак9.jpg",
+        isAviable: true,
     },
     {
         id: 20,
@@ -159,6 +177,7 @@ const products = [
         price: 4999,
         category: 'backpack',
         img: "рюкзак10.jpg",
+        isAviable: true,
     },
     {
         id: 21,
@@ -167,6 +186,7 @@ const products = [
         price: 49,
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности1.jpg',
+        isAviable: true,
     },
     {
         id: 22,
@@ -175,7 +195,7 @@ const products = [
         price: 179,
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности2.jpg',
-
+        isAviable: true,
     },
     {
         id: 23,
@@ -184,6 +204,7 @@ const products = [
         price: 16,
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности3.jpg',
+        isAviable: true,
     },
     {
         id: 24,
@@ -192,6 +213,7 @@ const products = [
         price: 41,
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности4.jpg',
+        isAviable: true,
     },
     {
         id: 25,
@@ -200,6 +222,7 @@ const products = [
         price: 65,
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности5.jpg',
+        isAviable: true,
     },
     {
         id: 26,
@@ -208,6 +231,7 @@ const products = [
         price: 229,
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности6.jpg',
+        isAviable: true,
     },
     {
         id: 27,
@@ -216,6 +240,7 @@ const products = [
         price: 169,
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности7.jpg',
+        isAviable: true,
     },
     {
         id: 28,
@@ -224,6 +249,7 @@ const products = [
         price: 227,
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности8.jpg',
+        isAviable: true,
     },
     {
         id: 29,
@@ -232,6 +258,7 @@ const products = [
         price: 159,
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности9.jpg',
+        isAviable: true,
     },
     {
         id: 30,
@@ -240,6 +267,7 @@ const products = [
         price: 43,
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности10.jpg',
+        isAviable: true,
     },
     {
         id: 31,
@@ -248,6 +276,7 @@ const products = [
         price: 65,
         category: 'pen',
         img: 'шариковаяРучка1.jpg',
+        isAviable: true,
     },
     {
         id: 32,
@@ -256,7 +285,7 @@ const products = [
         price: 29,
         category: 'pen',
         img: 'шариковаяРучка2.jpg',
-
+        isAviable: true,
     },
     {
         id: 33,
@@ -265,6 +294,7 @@ const products = [
         price: 45,
         category: 'pen',
         img: 'шариковаяРучка3.jpg',
+        isAviable: true,
     },
     {
         id: 34,
@@ -273,6 +303,7 @@ const products = [
         price: 109,
         category: 'pen',
         img: 'шариковаяРучка4.jpg',
+        isAviable: true,
     },
     {
         id: 35,
@@ -281,6 +312,7 @@ const products = [
         price: 129,
         category: 'pen',
         img: 'шариковаяРучка5.jpg',
+        isAviable: true,
     },
     {
         id: 36,
@@ -289,6 +321,7 @@ const products = [
         price: 109,
         category: 'pen',
         img: 'шариковаяРучка6.jpg',
+        isAviable: true,
     },
     {
         id: 37,
@@ -297,6 +330,7 @@ const products = [
         price: 76,
         category: 'pen',
         img: 'шариковаяРучка7.jpg',
+        isAviable: true,
     },
     {
         id: 38,
@@ -305,6 +339,7 @@ const products = [
         price: 56,
         category: 'pen',
         img: 'шариковаяРучка8.jpg',
+        isAviable: true,
     },
     {
         id: 39,
@@ -313,6 +348,7 @@ const products = [
         price: 109,
         category: 'pen',
         img: 'шариковаяРучка9.jpg',
+        isAviable: true,
     },
     {
         id: 40,
@@ -321,6 +357,7 @@ const products = [
         price: 142,
         category: 'pen',
         img: 'шариковаяРучка10.jpg',
+        isAviable: true,
     },
     {
         id: 41,
@@ -329,6 +366,7 @@ const products = [
         price: 29,
         category: 'notebook',
         img: 'тетрадь1.jpg',
+        isAviable: true,
     },
     {
         id: 42,
@@ -337,6 +375,7 @@ const products = [
         price: 25,
         category: 'notebook',
         img: 'тетрадь2.jpg',
+        isAviable: true,
 
     },
     {
@@ -346,6 +385,7 @@ const products = [
         price: 39,
         category: 'notebook',
         img: 'тетрадь3.jpg',
+        isAviable: true,
     },
     {
         id: 44,
@@ -354,6 +394,7 @@ const products = [
         price: 129,
         category: 'notebook',
         img: 'тетрадь4.jpg',
+        isAviable: true,
     },
     {
         id: 45,
@@ -362,6 +403,7 @@ const products = [
         price: 69,
         category: 'notebook',
         img: 'тетрадь5.jpg',
+        isAviable: true,
     },
     {
         id: 46,
@@ -370,6 +412,7 @@ const products = [
         price: 89,
         category: 'notebook',
         img: 'тетрадь6.jpg',
+        isAviable: true,
     },
     {
         id: 47,
@@ -378,6 +421,7 @@ const products = [
         price: 75,
         category: 'notebook',
         img: 'тетрадь7.jpg',
+        isAviable: true,
     },
     {
         id: 48,
@@ -386,6 +430,7 @@ const products = [
         price: 69,
         category: 'notebook',
         img: 'тетрадь8.jpg',
+        isAviable: true,
     },
     {
         id: 49,
@@ -394,6 +439,7 @@ const products = [
         price: 79,
         category: 'notebook',
         img: 'тетрадь9.jpg',
+        isAviable: true,
     },
     {
         id: 50,
@@ -402,7 +448,10 @@ const products = [
         price: 37,
         category: 'notebook',
         img: 'тетрадь10.jpg',
+        isAviable: true,
     }
 ]
+
+console.log(products)
 
 export default products;

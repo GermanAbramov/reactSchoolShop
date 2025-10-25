@@ -1,6 +1,12 @@
 main .products-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
     width: 100%;
-    justify-content: space-between;
+}
+
+@media (width < 1150px) {
+    main .products-container {
+        grid-template-columns: 1fr;
+    }
 }

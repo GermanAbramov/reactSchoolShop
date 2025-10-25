@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import Order from "./Order/Order";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Header(props) {
 
-    let [isCartOpen, setIsCartOpen] = useState(false);
+    const [isNavOpen, setIsNavOpen] = useState(false)
+    const [isCartOpen, setIsCartOpen] = useState(false);
     let summa = 0;
     props.orders.forEach(el => {
         summa += Number.parseFloat(el.price * el.count)
@@ -14,19 +16,36 @@ export default function Header(props) {
     return (
         <header>
             <section>
+                <GiHamburgerMenu className="hamburger-menu" onClick={() => { setIsNavOpen(!isNavOpen) }} />
                 <h1 className="logo" onClick={() => props.setSelectedTab('main')}>Готовимся к школе</h1>
                 <div className="menu">
                     <FaShoppingCart className={`shop-cart-button ${isCartOpen && 'active'}`} onClick={() => { setIsCartOpen(!isCartOpen) }} />
-                    <ul className="nav">
-                        <li onClick={() => props.setSelectedTab('catalogue')}>Каталог</li>
-                        <li onClick={() => props.setSelectedTab('about')}>О компании</li>
-                        <li onClick={() => props.setSelectedTab('contacts')}>Контакты</li>
-                    </ul>
+                    <div className={`nav-overlay ${isNavOpen && 'active'}`} onClick={() => { setIsNavOpen(false) }}>
+                        <ul className={`nav ${isNavOpen && 'active'}`}>
+                            <li onClick={(e) => {
+                                e.stopPropagation()
+                                props.setSelectedTab('catalogue')
+                                setIsNavOpen(false)
+                            }}>Каталог</li>
+                            <li onClick={(e) => {
+                                e.stopPropagation()
+                                props.setSelectedTab('about')
+                                setIsNavOpen(false)
+                            }}>О компании</li>
+                            <li onClick={(e) => {
+                                e.stopPropagation()
+                                props.setSelectedTab('contacts')
+                                setIsNavOpen(false)
+                            }}>Контакты</li>
+                        </ul>
+                    </div>
                 </div>
                 {isCartOpen && (
                     <div className="shop-cart">
-                        {props.orders.length > 0 ?
-                            showOrders(props) : showNothing()}
+                        <div className="shop-cart-content">
+                            {props.orders.length > 0 ?
+                                showOrders(props) : showNothing()}
+                        </div>
                     </div>
                 )}
             </section>
@@ -78,7 +97,7 @@ export default function Header(props) {
     function showNothing() {
         return (
             <div className="empty">
-                <h2>Товаров нет </h2>
+                <h2>В корзине пусто</h2>
             </div>
         )
     }

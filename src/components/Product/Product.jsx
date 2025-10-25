@@ -7,24 +7,40 @@ export default function Product(props) {
     const [counter, setCounter] = useState(1);
 
     return (
-        <section className='product'>
-            <img src={"/reactSchoolShop/img/products/" + product.img} alt={product.title} onClick={() => props.onShowProduct(product)} />
+        <section className='product' onClick={() => props.onShowProduct(product)}>
+            <img src={"/reactSchoolShop/img/products/" + product.img} alt={product.title} />
             <h3>{truncate(product.title, 50)}</h3>
             <p>{truncate(product.desc, 75)}</p>
-            <section className="count">Количество
-                <div className='countControl'>
-                    <button type='button' className='countBtn' onClick={() => { if (counter > 1) setCounter(counter - 1) }}>-</button>
-                    <span>{counter}</span>
-                    <button type='button' className='countBtn' onClick={() => { setCounter(counter + 1) }}>+</button>
-                </div>
-            </section>
-            <b>{product.price}₽</b>
-            <button type='button' className='add-to-cart' onClick={() => {
-                const productToAdd = { ...product, count: counter };
-                props.showModalCart();
-                props.onAdd(productToAdd);
-            }}><FaCartPlus />
-            </button>
+
+            {product.isAviable &&
+                <>
+                    <section className="count">Количество
+                        <div className='countControl'>
+                            <button type='button' className='countBtn' onClick={(e) => {
+                                e.stopPropagation()
+                                if (counter > 1) setCounter(counter - 1)
+                            }}>-</button>
+                            <span>{counter}</span>
+                            <button type='button' className='countBtn' onClick={(e) => {
+                                e.stopPropagation()
+                                setCounter(counter + 1)
+                            }}>+</button>
+                        </div>
+                    </section>
+                    <b>{product.price}₽</b>
+                    <button type='button' className='add-to-cart' onClick={(e) => {
+                        const productToAdd = { ...product, count: counter };
+                        props.showModalCart();
+                        props.onAdd(productToAdd);
+                        e.stopPropagation()
+                    }}><FaCartPlus />
+                    </button>
+                </>
+            }
+            {
+                !product.isAviable &&
+                <h3 className="not-aviable">Товара нет в наличии</h3>
+            }
         </section>
     )
 

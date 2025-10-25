@@ -96,3 +96,9 @@ header .shop-cart .summa {
     color: rgb(82, 164, 0);
     margin-bottom: 20px;
 }
+
+@media (width < 1000px) {
+    header .shop-cart .product span {
+        display: none;
+    }
+}
