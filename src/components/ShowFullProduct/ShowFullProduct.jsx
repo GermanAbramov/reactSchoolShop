@@ -1,11 +1,25 @@
 import { FaCartPlus } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-import { useState } from 'react';
+import React from "react";
 import './ShowFullProduct.css';
 
 export default function ShowFullProduct(props) {
     const product = props.product;
-    const [counter, setCounter] = useState(1);
+    const checked = props.orders.filter(el => el.id === product.id).length > 0;
+
+    const selectedProduct = props.counter.find(el => el.id === product.id);
+    const selectedProductCount = selectedProduct ? selectedProduct.count : 0;
+
+    React.useEffect(() => {
+        if (selectedProductCount > 0) {
+            return
+        }
+        props.addCounter(product.id, 1);
+    }, []);
+
+    React.useEffect(() => {
+        console.log(props.counter)
+    }, [props.counter]);
 
     return (
         <section className="overlay" onClick={() => { props.setShowFullProduct(false) }}>
@@ -17,21 +31,40 @@ export default function ShowFullProduct(props) {
 
                 {product.isAviable &&
                     <>
-                        <section className="count">Количество
-                            <div className='countControl'>
-                                <button type='button' className='countBtn' onClick={() => { if (counter > 1) setCounter(counter - 1) }}>-</button>
-                                <span>{counter}</span>
-                                <button type='button' className='countBtn' onClick={() => { setCounter(counter + 1) }}>+</button>
+                        <div className='buy-product'>
+                            <b>{product.price}₽</b>
+                            <div className="count-control">
+                                <div className={`${checked && 'active'}`}>
+                                    <button type='button' className='countBtn' onClick={(e) => {
+                                        e.stopPropagation()
+                                        if (selectedProductCount > 1) {
+                                            const newCounter = selectedProductCount - 1;
+                                            props.addCounter(product.id, newCounter)
+                                            props.onAdd({ ...product, count: newCounter })
+                                        }
+                                    }}>-</button>
+                                    <span>{selectedProductCount + ' шт.'}</span>
+                                    <button type='button' className='countBtn' onClick={(e) => {
+                                        e.stopPropagation();
+                                        const newCounter = selectedProductCount + 1;
+                                        props.addCounter(product.id, newCounter)
+                                        props.onAdd({ ...product, count: newCounter })
+                                    }}>+</button>
+                                </div>
+                                <button type='button' className={`add-to-cart ${!checked && 'active'}`} onClick={(e) => {
+                                    const newCounter = selectedProductCount
+                                    props.showModalCart();
+                                    props.onAdd({ ...product, count: newCounter });
+                                    e.stopPropagation()
+                                }}><FaCartPlus />
+                                </button>
                             </div>
-                        </section>
-                        <b>{product.price}₽</b>
-                        <button type='button' className='add-to-cart' onClick={() => {
-                            const productToAdd = { ...product, count: counter };
-                            props.showModalCart();
-                            props.onAdd(productToAdd);
-                        }}><FaCartPlus />
-                        </button>
+                        </div>
                     </>
+                }
+                {
+                    !product.isAviable &&
+                    <h3 className="not-aviable">Товара нет в наличии</h3>
                 }
             </section>
         </section>

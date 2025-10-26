@@ -1,12 +1,14 @@
 .overlay .product {
+    position: relative;
     min-width: 350px;
     max-width: 60%;
+    max-height: 80%;
     margin-inline: auto;
     background: rgb(220, 219, 219);
     border-radius: 15px 15px 0 0;
     overflow: hidden;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 45px;
 }
 
 .overlay .product .close-btn {
@@ -30,28 +32,44 @@
 .overlay .product p {
     max-height: 100px;
     overflow: auto;
+    margin-bottom: 15px;
 }
 
 .overlay .product b {
     font-weight: 600;
-    position: absolute;
     height: 35px;
     margin: 0;
-    margin-left: 20px;
     line-height: 35px;
-    bottom: 10px;
+    color: rgb(82, 164, 0);
 }
 
 
-
 .overlay .product h3 {
-    height: 8%;
     overflow: hidden;
     letter-spacing: -1px;
+    margin-bottom: 0;
 }
 
 .overlay .product section {
     margin-inline: 20px;
+}
+
+.overlay .product .count-control {
+    position: relative;
+    width: 180px;
+    height: 35px;
+    overflow: hidden;
+}
+
+.overlay .product .buy-product {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
 }
 
 .overlay .product .count {
@@ -59,20 +77,10 @@
     font-weight: 600;
 }
 
-.overlay .product .count,
-.overlay .product .countControl {
+.overlay .product .count {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.overlay .product .countControl span {
-    display: inline-block;
-    margin-inline: 20px;
-}
-
-.overlay .product b {
-    color: rgb(82, 164, 0);
 }
 
 .overlay button {
@@ -98,12 +106,16 @@
 
 .overlay .add-to-cart {
     position: absolute;
-    right: 20px;
-    bottom: 10px;
+    right: 0;
     background: rgb(82, 164, 0);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 40% 50%);
     width: 60px;
     border-radius: 10%;
+    transform: translateX(200%);
+}
+
+.overlay .add-to-cart.active {
+    transform: translateX(0%);
 }
 
 .overlay .add-to-cart svg {
@@ -125,6 +137,21 @@
         max-width: 100%;
         max-height: 100%;
     }
+
+    .overlay .product img {
+        height: 275px;
+    }
+
+    .overlay .product p {
+        margin-top: 0;
+        line-height: 1;
+        max-height: 80px;
+    }
+
+    .overlay .product h3 {
+        line-height: 1;
+    }
+
 
     .overlay .product .close-btn {
         display: inline-block;
@@ -152,7 +179,7 @@
     }
 }
 
-@media (height < 650px) {
+/* @media (height < 650px) {
     .overlay .product {
         min-width: 1px;
         max-width: 90vw;
@@ -162,4 +189,4 @@
     .overlay .product img {
         height: 300px;
     }
-}
+} */

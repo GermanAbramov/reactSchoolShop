@@ -7,6 +7,8 @@ const products = [
         category: 'diary',
         img: 'дневник1.jpg',
         isAviable: true,
+
+
     },
     {
         id: 2,
@@ -16,6 +18,7 @@ const products = [
         category: 'diary',
         img: 'дневник2.jpg',
         isAviable: false,
+
     },
     {
         id: 3,
@@ -25,6 +28,8 @@ const products = [
         category: 'diary',
         img: 'дневник3.jpg',
         isAviable: true,
+
+
     },
     {
         id: 4,
@@ -34,6 +39,8 @@ const products = [
         category: 'diary',
         img: 'дневник4.jpg',
         isAviable: true,
+
+
     },
     {
         id: 5,
@@ -43,6 +50,8 @@ const products = [
         category: 'diary',
         img: 'дневник5.jpg',
         isAviable: true,
+
+
     },
     {
         id: 6,
@@ -52,6 +61,8 @@ const products = [
         category: 'diary',
         img: 'дневник6.jpg',
         isAviable: true,
+
+
     },
     {
         id: 7,
@@ -61,6 +72,8 @@ const products = [
         category: 'diary',
         img: 'дневник7.jpg',
         isAviable: true,
+
+
     },
     {
         id: 8,
@@ -70,6 +83,8 @@ const products = [
         category: 'diary',
         img: 'дневник8.jpg',
         isAviable: true,
+
+
     },
     {
         id: 9,
@@ -79,6 +94,8 @@ const products = [
         category: 'diary',
         img: 'дневник9.jpg',
         isAviable: true,
+
+
     },
     {
         id: 10,
@@ -88,6 +105,7 @@ const products = [
         category: 'diary',
         img: 'дневник10.jpg',
         isAviable: false,
+
     },
     {
         id: 11,
@@ -97,6 +115,8 @@ const products = [
         category: 'backpack',
         img: "рюкзак1.jpg",
         isAviable: true,
+
+
     },
     {
         id: 12,
@@ -106,6 +126,8 @@ const products = [
         category: 'backpack',
         img: "рюкзак2.jpg",
         isAviable: true,
+
+
     },
     {
         id: 13,
@@ -115,6 +137,8 @@ const products = [
         category: 'backpack',
         img: "рюкзак3.jpg",
         isAviable: true,
+
+
     },
     {
         id: 14,
@@ -124,6 +148,9 @@ const products = [
         category: 'backpack',
         img: "рюкзак4.jpg",
         isAviable: true,
+
+
+
     },
     {
         id: 15,
@@ -133,6 +160,8 @@ const products = [
         category: 'backpack',
         img: "рюкзак5.jpg",
         isAviable: false,
+
+
     },
     {
         id: 16,
@@ -142,6 +171,8 @@ const products = [
         category: 'backpack',
         img: "рюкзак6.jpg",
         isAviable: true,
+
+
     },
     {
         id: 17,
@@ -151,6 +182,8 @@ const products = [
         category: 'backpack',
         img: "рюкзак7.jpg",
         isAviable: true,
+
+
     },
     {
         id: 18,
@@ -160,6 +193,8 @@ const products = [
         category: 'backpack',
         img: "рюкзак8.jpg",
         isAviable: true,
+
+
     },
     {
         id: 19,
@@ -169,6 +204,7 @@ const products = [
         category: 'backpack',
         img: "рюкзак9.jpg",
         isAviable: true,
+
     },
     {
         id: 20,
@@ -178,6 +214,7 @@ const products = [
         category: 'backpack',
         img: "рюкзак10.jpg",
         isAviable: true,
+
     },
     {
         id: 21,
@@ -187,6 +224,7 @@ const products = [
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности1.jpg',
         isAviable: true,
+
     },
     {
         id: 22,
@@ -196,6 +234,7 @@ const products = [
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности2.jpg',
         isAviable: true,
+
     },
     {
         id: 23,
@@ -205,6 +244,7 @@ const products = [
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности3.jpg',
         isAviable: true,
+
     },
     {
         id: 24,
@@ -214,6 +254,7 @@ const products = [
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности4.jpg',
         isAviable: true,
+
     },
     {
         id: 25,
@@ -223,6 +264,7 @@ const products = [
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности5.jpg',
         isAviable: true,
+
     },
     {
         id: 26,
@@ -232,6 +274,7 @@ const products = [
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности6.jpg',
         isAviable: true,
+
     },
     {
         id: 27,
@@ -241,6 +284,7 @@ const products = [
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности7.jpg',
         isAviable: true,
+
     },
     {
         id: 28,
@@ -250,6 +294,7 @@ const products = [
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности8.jpg',
         isAviable: true,
+
     },
     {
         id: 29,
@@ -259,6 +304,7 @@ const products = [
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности9.jpg',
         isAviable: true,
+
     },
     {
         id: 30,
@@ -268,6 +314,7 @@ const products = [
         category: 'drawingAccessories',
         img: 'чертежныеПринадлежности10.jpg',
         isAviable: true,
+
     },
     {
         id: 31,
@@ -277,6 +324,7 @@ const products = [
         category: 'pen',
         img: 'шариковаяРучка1.jpg',
         isAviable: true,
+
     },
     {
         id: 32,
@@ -286,6 +334,7 @@ const products = [
         category: 'pen',
         img: 'шариковаяРучка2.jpg',
         isAviable: true,
+
     },
     {
         id: 33,
@@ -295,6 +344,7 @@ const products = [
         category: 'pen',
         img: 'шариковаяРучка3.jpg',
         isAviable: true,
+
     },
     {
         id: 34,
@@ -304,6 +354,7 @@ const products = [
         category: 'pen',
         img: 'шариковаяРучка4.jpg',
         isAviable: true,
+
     },
     {
         id: 35,
@@ -313,6 +364,7 @@ const products = [
         category: 'pen',
         img: 'шариковаяРучка5.jpg',
         isAviable: true,
+
     },
     {
         id: 36,
@@ -322,6 +374,7 @@ const products = [
         category: 'pen',
         img: 'шариковаяРучка6.jpg',
         isAviable: true,
+
     },
     {
         id: 37,
@@ -331,6 +384,7 @@ const products = [
         category: 'pen',
         img: 'шариковаяРучка7.jpg',
         isAviable: true,
+
     },
     {
         id: 38,
@@ -340,6 +394,7 @@ const products = [
         category: 'pen',
         img: 'шариковаяРучка8.jpg',
         isAviable: true,
+
     },
     {
         id: 39,
@@ -349,6 +404,7 @@ const products = [
         category: 'pen',
         img: 'шариковаяРучка9.jpg',
         isAviable: true,
+
     },
     {
         id: 40,
@@ -358,6 +414,7 @@ const products = [
         category: 'pen',
         img: 'шариковаяРучка10.jpg',
         isAviable: true,
+
     },
     {
         id: 41,
@@ -367,6 +424,7 @@ const products = [
         category: 'notebook',
         img: 'тетрадь1.jpg',
         isAviable: true,
+
     },
     {
         id: 42,
@@ -377,6 +435,7 @@ const products = [
         img: 'тетрадь2.jpg',
         isAviable: true,
 
+
     },
     {
         id: 43,
@@ -386,6 +445,7 @@ const products = [
         category: 'notebook',
         img: 'тетрадь3.jpg',
         isAviable: true,
+
     },
     {
         id: 44,
@@ -395,6 +455,7 @@ const products = [
         category: 'notebook',
         img: 'тетрадь4.jpg',
         isAviable: true,
+
     },
     {
         id: 45,
@@ -404,6 +465,7 @@ const products = [
         category: 'notebook',
         img: 'тетрадь5.jpg',
         isAviable: true,
+
     },
     {
         id: 46,
@@ -413,6 +475,7 @@ const products = [
         category: 'notebook',
         img: 'тетрадь6.jpg',
         isAviable: true,
+
     },
     {
         id: 47,
@@ -422,6 +485,7 @@ const products = [
         category: 'notebook',
         img: 'тетрадь7.jpg',
         isAviable: true,
+
     },
     {
         id: 48,
@@ -431,6 +495,7 @@ const products = [
         category: 'notebook',
         img: 'тетрадь8.jpg',
         isAviable: true,
+
     },
     {
         id: 49,
@@ -440,6 +505,7 @@ const products = [
         category: 'notebook',
         img: 'тетрадь9.jpg',
         isAviable: true,
+
     },
     {
         id: 50,
@@ -449,6 +515,7 @@ const products = [
         category: 'notebook',
         img: 'тетрадь10.jpg',
         isAviable: true,
+
     }
 ]
 

@@ -17,15 +17,16 @@ function App() {
   const [currentProducts, setCurrentProducts] = useState(products_);
   const [showFullProduct, setShowFullProduct] = useState(false);
   const [fullProduct, setFullProduct] = useState({});
+  const [counter, setCounter] = useState([]);
 
   return (
     <div className="wrapper">
       <div className="page-wrapper">
         <div>{showCartModal && <div className='add-to-cart-modal'>Товар добавлен</div>}</div>
-        <Header orders={orders} onDelete={deleteOrder} selectedTab={selectedTab} setSelectedTab={selectTab} />
+        <Header orders={orders} onDelete={deleteOrder} selectedTab={selectedTab} setSelectedTab={selectTab} counter={counter} addCounter={addCounter} onAdd={addToOrders} setOrders={setOrders} />
 
         {showFullProduct && <ShowFullProduct product={fullProduct} onAdd={addToOrders}
-          setShowFullProduct={setShowFullProduct} showModalCart={showModalCart} />}
+          setShowFullProduct={setShowFullProduct} showModalCart={showModalCart} orders={orders} counter={counter} addCounter={addCounter} />}
 
         {(selectedTab === 'main') &&
           <main>
@@ -33,8 +34,7 @@ function App() {
               <h2>Популярные товары</h2>
               <p>Посмотрите, какие принадлежности покупают чаще всего</p>
             </section>
-            <ProductsContainer products={popularProducts} onAdd={addToOrders} showModalCart={showModalCart}
-              onShowProduct={onShowProduct} />
+            <ProductsContainer products={popularProducts} onAdd={addToOrders} showModalCart={showModalCart} onShowProduct={onShowProduct} orders={orders} counter={counter} addCounter={addCounter} />
           </main>
         }
 
@@ -42,8 +42,7 @@ function App() {
           <main>
             <Categories chooseCategory={chooseCategory} />
             <section className="products">
-              <ProductsContainer products={currentProducts} onAdd={addToOrders} showModalCart={showModalCart}
-                onShowProduct={onShowProduct} />
+              <ProductsContainer products={currentProducts} onAdd={addToOrders} showModalCart={showModalCart} onShowProduct={onShowProduct} orders={orders} counter={counter} addCounter={addCounter} />
             </section>
             {console.log(currentProducts)}
           </main>
@@ -103,7 +102,7 @@ function App() {
 
 
   function deleteOrder(id) {
-    setOrders(orders.filter(el => el.id !== id))
+    setOrders(orders.filter(el => el.id !== id));
   }
 
   function addToOrders(item) {
@@ -117,7 +116,7 @@ function App() {
         const updatedOrders = [...prevOrders];
         updatedOrders[index] = {
           ...updatedOrders[index],
-          count: updatedOrders[index].count + item.count
+          count: item.count
         };
         return updatedOrders;
       }
@@ -147,6 +146,23 @@ function App() {
   function onShowProduct(product) {
     setFullProduct(product)
     setShowFullProduct(!showFullProduct)
+  }
+
+  function addCounter(id, count) {
+    setCounter(prev => {
+      const index = prev.findIndex(item => item.id === id);
+
+      if (index === -1) {
+        return [...prev, { id, count }];
+      } else {
+        const updatedCounters = [...prev];
+        updatedCounters[index] = {
+          ...updatedCounters[index],
+          count: count
+        };
+        return updatedCounters;
+      }
+    });
   }
 }
 
