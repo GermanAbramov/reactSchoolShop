@@ -1,0 +1,125 @@
+.make-order-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: -1px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.712);
+    z-index: 1100;
+    overflow: auto;
+}
+
+.make-order-overlay.hidden {
+    display: none;
+}
+
+.make-order {
+    position: relative;
+    background: rgb(232, 232, 232);
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    max-width: 760px;
+}
+
+.make-order h3 {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.receive-type {
+    margin-bottom: 15px;
+}
+
+.location-and-contacts {
+    margin-bottom: 15px;
+}
+
+.location-and-contacts input {
+    margin-left: 8px;
+    margin-right: 15px;
+}
+
+.location-and-contacts .order-map {
+    margin-bottom: 5px;
+}
+
+.pay-type {
+    display: inline-block;
+}
+
+.pay-type h3 {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pay-type input[type="radio"] {
+    margin-right: 5px;
+    width: 20px;
+}
+
+.receive-type label {
+    margin-right: 15px;
+}
+
+.pay-type label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    height: 40px;
+    font-weight: 600;
+}
+
+.pay-type img {
+    margin-right: 10px;
+    height: 40px;
+    width: auto;
+}
+
+.submit-order {
+    padding: 10px;
+    width: fit-content;
+    color: #fff;
+    background: rgb(82, 164, 0);
+    border-radius: 15px 15px 15px 0;
+    cursor: pointer;
+}
+
+.submit-order span {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+@media (width < 800px) {
+    .make-order {
+        max-height: 90%;
+        overflow-y: auto;
+    }
+
+    .order-map {
+        max-height: 40vh;
+    }
+
+    .pay-type {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pay-type label {
+        margin-bottom: 5px;
+    }
+
+    .location-and-contacts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .location-and-contacts label {
+        margin-bottom: 5px;
+    }
+}

@@ -125,6 +125,11 @@ header .shop-cart .summa {
     background: rgb(82, 164, 0);
     border-radius: 15px 15px 15px 0;
     margin-bottom: 20px;
+    cursor: pointer;
+}
+
+header .shop-cart .summa svg {
+    transform: translateY(2px) scale(1.5);
 }
 
 header .shop-cart .delete {

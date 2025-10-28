@@ -99,7 +99,7 @@ header .hamburger-menu {
   display: none;
 }
 
-header>section {
+header>section:first-child {
   padding-inline: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -250,6 +250,35 @@ header .mini-banner h2 {
   cursor: auto;
 }
 
+header .finished-order-overlay.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: -1px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.712);
+  z-index: 1100;
+  overflow: auto;
+}
+
+header .finished-order-overlay {
+  display: none;
+}
+
+header .finished-order.active {
+  font-size: 20px;
+  background: rgb(228, 228, 228);
+  border-radius: 15px;
+  padding: 15px;
+  width: 290px;
+}
+
+header .finished-order {
+  display: none;
+}
 
 main h2 {
   margin-bottom: 8px;
@@ -346,10 +375,6 @@ footer ul.media li img {
 @media (width < 1150px) {
   *:hover {
     transform: none;
-  }
-
-  * {
-    font-size: 14px;
   }
 
   h1,

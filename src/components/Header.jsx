@@ -3,11 +3,16 @@ import { FaShoppingCart } from "react-icons/fa";
 import Order from "./Order/Order";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaCheckCircle } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
+import MakeOrder from "./MakeOrder/MakeOrder";
 
 export default function Header(props) {
 
     const [isNavOpen, setIsNavOpen] = useState(false)
     const [isCartOpen, setIsCartOpen] = useState(false);
+    const [isMakeOrder, setIsMakeOrder] = useState(true);
+    const [finishOrder, setFinishOrder] = useState(false);
+
     let summa = 0;
     props.orders.forEach(el => {
         summa += Number.parseFloat(el.price * el.count)
@@ -88,6 +93,14 @@ export default function Header(props) {
                 <section className="mini-banner">
                     <h2>Контакты</h2>
                 </section>}
+
+            <MakeOrder sum={summa} isMakeOrder={isMakeOrder} setIsMakeOrder={setIsMakeOrder} orders={props.orders} addCounter={props.addCounter} setOrders={props.setOrders} setFinishOrder={setFinishOrder} />
+
+            <div className={`finished-order-overlay ${finishOrder && 'active'}`} onClick={() => { setFinishOrder(false) }}>
+                <div className={`finished-order ${finishOrder && 'active'}`}>
+                    <b><strong>Благодарим вас за заказ!</strong></b> Ждите уведомления о готовности.
+                </div>
+            </div>
         </header>
     )
 
@@ -102,7 +115,10 @@ export default function Header(props) {
                     ))}
                 </div>
                 <div className="finish">
-                    <div className="summa">К оформлению: ${summa.toFixed(2)}₽ ⮞</div>
+                    <div className="summa" onClick={() => {
+                        setIsCartOpen(!isCartOpen)
+                        setIsMakeOrder(false)
+                    }}>К оформлению: {summa.toFixed(2)}₽ <FaAngleRight /></div>
                     <div className="delete" onClick={() => {
                         props.orders.forEach(el => {
                             props.addCounter(el.id, 1)
