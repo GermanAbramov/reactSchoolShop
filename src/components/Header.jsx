@@ -98,7 +98,7 @@ export default function Header(props) {
 
             <div className={`finished-order-overlay ${finishOrder && 'active'}`} onClick={() => { setFinishOrder(false) }}>
                 <div className={`finished-order ${finishOrder && 'active'}`}>
-                    <b><strong>Благодарим вас за заказ!</strong></b> Ждите уведомления о готовности.
+                    <b><strong>Благодарим вас за заказ!</strong></b><br /> Ждите уведомления о готовности.
                 </div>
             </div>
         </header>
